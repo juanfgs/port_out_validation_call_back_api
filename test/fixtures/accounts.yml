@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pon: MyString
+  pin: MyString
+  account_number: MyString
+  zip_code: MyString
+  subscriber_name: MyString
+
+two:
+  pon: MyString
+  pin: MyString
+  account_number: MyString
+  zip_code: MyString
+  subscriber_name: MyString

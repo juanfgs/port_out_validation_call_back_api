@@ -81,5 +81,9 @@ test:
 production:
   <<: *default
   database: port_out_validation_callback_api_production
-  username: port_out_validation_callback_api
-  password: <%= ENV['PORT_OUT_VALIDATION_CALLBACK_API_DATABASE_PASSWORD'] %>
+  username: telcodepot
+  password: Wtf4%33x
+
+
+#  username: port_out_validation_callback_api
+#  password: <%= ENV['PORT_OUT_VALIDATION_CALLBACK_API_DATABASE_PASSWORD'] %>

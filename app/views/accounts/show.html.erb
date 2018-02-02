@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Pon:</strong>
+  <%= @account.pon %>
+</p>
+
+<p>
+  <strong>Pin:</strong>
+  <%= @account.pin %>
+</p>
+
+<p>
+  <strong>Account number:</strong>
+  <%= @account.account_number %>
+</p>
+
+<p>
+  <strong>Zip code:</strong>
+  <%= @account.zip_code %>
+</p>
+
+<p>
+  <strong>Subscriber name:</strong>
+  <%= @account.subscriber_name %>
+</p>
+
+<%= link_to 'Edit', edit_account_path(@account) %> |
+<%= link_to 'Back', accounts_path %>
