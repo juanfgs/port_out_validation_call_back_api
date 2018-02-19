@@ -10,7 +10,7 @@
       <th>Account number</th>
       <th>Zip code</th>
       <th>Subscriber name</th>
-      <th colspan="3"></th>
+      <th colspan="4"></th>
     </tr>
   </thead>
 
@@ -22,6 +22,9 @@
         <td><%= account.account_number %></td>
         <td><%= account.zip_code %></td>
         <td><%= account.subscriber_name %></td>
+        
+        <td><%= link_to 'Add Phone', new_phone_path %></td>
+
         <td><%= link_to 'Show', account %></td>
         <td><%= link_to 'Edit', edit_account_path(account) %></td>
         <td><%= link_to 'Destroy', account, method: :delete, data: { confirm: 'Are you sure?' } %></td>

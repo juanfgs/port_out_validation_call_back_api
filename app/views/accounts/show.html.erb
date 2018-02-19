@@ -25,5 +25,11 @@
   <%= @account.subscriber_name %>
 </p>
 
+<p>
+  <% @phone.each do |p| %>
+    <p> <strong>Phones:</strong> <%= p.phone_number %></p>
+  <% end %>
+</p>
+
 <%= link_to 'Edit', edit_account_path(@account) %> |
 <%= link_to 'Back', accounts_path %>
