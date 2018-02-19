@@ -15,7 +15,7 @@
     <% @phones.each do |phone| %>
       <tr>
         <td><%= phone.phone_number %></td>
-        <td><%= phone.account %></td>
+        <td><%= phone.account.subscriber_name %></td>
         <td><%= link_to 'Show', phone %></td>
         <td><%= link_to 'Edit', edit_phone_path(phone) %></td>
         <td><%= link_to 'Destroy', phone, method: :delete, data: { confirm: 'Are you sure?' } %></td>

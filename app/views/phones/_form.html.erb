@@ -18,10 +18,10 @@
 
   <div class="field">
     <%= form.label :account_id %>
-    <%= form.text_field :account_id, id: :phone_account_id %>
+    <%= form.collection_select(:account_id, Account.all, :id, :subscriber_name) %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit 'Create Phone', :class => 'btn btn-primary' %>
   </div>
 <% end %>
