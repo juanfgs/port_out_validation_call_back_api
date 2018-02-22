@@ -1,8 +1,10 @@
 require 'test_helper'
 
 class PhonesControllerTest < ActionDispatch::IntegrationTest
+  include Devise::Test::IntegrationHelpers
   setup do
     @phone = phones(:one)
+    sign_in User.create(:email => "#{rand(50000)}@example.com")
   end
 
   test "should get index" do
