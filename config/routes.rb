@@ -9,7 +9,6 @@ Rails.application.routes.draw do
   resources :phones
   resources :accounts
 
-  resources :callbacks
-
+  post 'callbacks/portOutValidationCallbackApi', to:'callbacks#portOutValidationCallbackApi'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

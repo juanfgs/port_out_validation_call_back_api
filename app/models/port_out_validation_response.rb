@@ -1,6 +1,6 @@
 require 'active_support'
 class PortOutValidationResponse
-  attr_accessor :portable,:pon,:errors
+  attr_accessor :errors
 
   def initialize()
     @error_Codes = [
@@ -10,7 +10,7 @@ class PortOutValidationResponse
       },
        {
         "Code" => 7511,
-        "Description" => "Too many Telephone numbers in this request"
+        "Description" => "Invalid Account Code"
       },
        {
         "Code" => 7512,
@@ -63,6 +63,13 @@ class PortOutValidationResponse
     @data = {}
   end
 
+  def portable=(value)
+    @data["Portable"] = value
+  end
+  def pon=(value)
+    @data["PON"] = value
+  end
+  
   def to_xml()
     if @data.key? "Errors"
       @data["AcceptableValues"] = @acceptable_values

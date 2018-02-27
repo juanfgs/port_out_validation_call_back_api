@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  pon: MyString
-  pin: MyString
-  account_number: MyString
-  zip_code: MyString
-  subscriber_name: MyString
+  pon: 12345
+  pin: 132456
+  account_number: 777
+  zip_code: 556677
+  subscriber_name: 7777
 
 two:
   pon: MyString
@@ -13,3 +13,4 @@ two:
   account_number: MyString
   zip_code: MyString
   subscriber_name: MyString
+
