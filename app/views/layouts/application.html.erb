@@ -30,12 +30,6 @@
                   <ul class="navbar-nav mr-auto">
                     <% if user_signed_in? %>
 
-                          <% if current_user.id == 1 %>
-                            <li class="nav-item active">
-                              <%= link_to "add new user", "/users", :class => 'nav-link' %>
-                            </li>
-                          <% end %>
-
                           <li class="nav-item active">
                             <%= link_to 'Accounts', "/accounts", :class => 'nav-link' %> 
                           </li>
