@@ -1,3 +1,6 @@
+require 'csv'
+require 'pp'
+
 class AccountsController < ApplicationController
   before_action :set_account, only: [:show, :edit, :update, :destroy]
 
@@ -63,6 +66,22 @@ class AccountsController < ApplicationController
     end
   end
 
+  def import()
+    @rows = []
+    if params[:accounts]
+      CSV.foreach(params[:accounts][:csv].tempfile, :headers =>  true) do |row|
+          @account = Account.create({
+                                   :pon => row[0],
+                                   :pin => row[1],
+                                   :account_number => row[2],
+                                   :zip_code => row[3],
+                                   :subscriber_name => row[4],
+                                 })
+      end
+    end
+  end
+
+  
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_account
